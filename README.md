@@ -19,9 +19,9 @@ This runs the resources server
 ### go to localhost:8080
 ```
 
-## Explaination for discount object
+## Explanation for discount object
 
-Following is the sample discount object
+Following is a sample discount object
 
 ```
 			{
@@ -34,12 +34,13 @@ Following is the sample discount object
 ```
 
 display - The string to show in the front end application
-discountRate - The percentage rate with respect to original price
+
+discountRate - The percentage rate to multiply with the original price to get the discounted price
 
 ```
 A simple calculation is 
 original - 26999
-offer is 3 for 2 - which means that (2/3 of original price) * quantity
+offer is 3 items for the price of 2 - which means that (2/3 of original price) * quantity
 so discountRate will be 2/3 ie 0.6666666666666666
 ```
 
