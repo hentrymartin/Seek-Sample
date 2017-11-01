@@ -10,13 +10,13 @@ I've used json-server to serve customers, plans and discounts values
 ### npm install -g json-server
 ### json-server --watch jsons/db.json --port 3004
 ```
-This is run the resources server
+This runs the resources server
 
 ## FrontEnd Setup
 ```
 ### npm install
 ### npm start
-### go to localhost:8080/choose-product
+### go to localhost:8080
 ```
 
 ## Explaination for discount object
