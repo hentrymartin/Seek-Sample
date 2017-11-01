@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CheckoutForm.scss';
 
 const CheckoutForm = (props) => {
@@ -48,6 +49,18 @@ const CheckoutForm = (props) => {
 			}
 		</div>
 	);
+};
+
+CheckoutForm.defaultProps = {
+	cart: [],
+	totalQuantity: 0,
+	totalPrice: 0,
+};
+
+CheckoutForm.propTypes = {
+	cart: PropTypes.array,
+	totalQuantity: PropTypes.number,
+	totalPrice: PropTypes.number,
 };
 
 export default CheckoutForm;

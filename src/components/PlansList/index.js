@@ -1,10 +1,10 @@
 import React from 'react';
-import {hashCode} from './../../utils';
+import { hashCode } from './../../utils';
 import Constants from './../../constants';
+import PropTypes from 'prop-types';
 import './PlansList.scss';
 
 const PlansList = (props) => {
-	console.log(props.customer);
 	const discountsBasedOnPlan = props.customer && props.discounts[props.customer.id] || [];
 
 	const onQuantityChanged = (plan, event) => {
@@ -16,21 +16,22 @@ const PlansList = (props) => {
 			<h3 className="plans-list__title">List Of Plans</h3>
 			<div className="plans-list__list">
 				{
-					props.plans.map((plan) => {
+					props.plans.map((plan, index) => {
 						const style = {
 							color: hashCode(plan.name),
 						};
 						const discountsForThisPlan = discountsBasedOnPlan && discountsBasedOnPlan.filter(each => each.planId === plan.id) || [];
-						console.log(discountsForThisPlan, plan.id);
 						return (
-							<div className="plans-list__plan" style={style}>
+							<div
+								key={index}
+								className="plans-list__plan" style={style}>
 								<div className="plans-list__plan__name">
 									{plan.name}
 								</div>
 								<div className="plans-list__plan__features">
 									<div className="plans-list__plan__features__title">Features</div>
 									{
-										plan.features.map(feature => <div>{feature}</div>)
+										plan.features.map((feature, key) => <div key={key}>{feature}</div>)
 									}
 								</div>
 								<div className="plans-list__plan__discounts">
@@ -39,9 +40,11 @@ const PlansList = (props) => {
 										<div>No Discounts Available for this customer</div>
 									}
 									{
-										discountsForThisPlan.map((discount) => {
+										discountsForThisPlan.map((discount, loop) => {
 											return (
-												<div className="plans-list__plan__discounts__discount">
+												<div
+													key={loop}
+													className="plans-list__plan__discounts__discount">
 													{discount.display}
 												</div>
 											);
@@ -75,6 +78,20 @@ const PlansList = (props) => {
 			</div>
 		</section>
 	);
+};
+
+PlansList.defaultProps = {
+	plans: [],
+	customer: {},
+	addToCart: () => {},
+	discounts: {},
+};
+
+PlansList.propTypes = {
+	plans: PropTypes.array,
+	customer: PropTypes.object,
+	addToCart: PropTypes.func,
+	discounts: PropTypes.object,
 };
 
 export default PlansList;
