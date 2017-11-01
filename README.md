@@ -10,7 +10,9 @@ I've used json-server to serve customers, plans and discounts values
 ### npm install -g json-server
 ### json-server --watch jsons/db.json --port 3004
 ```
-This runs the resources server
+This runs the resource server
+
+Now, you can access the resources in localhost:3004
 
 ## FrontEnd Setup
 ```
