@@ -1,0 +1,64 @@
+.checkout-form {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 20px;
+	&__title {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+  &__header {
+    display: flex;
+    padding: 10px;
+    &__plan-name {
+      display: flex;
+      flex: 1;
+    }
+    &__quantity, &__price {
+      width: 100px;
+    }
+  }
+	&__list {
+    display: flex;
+    flex-direction: column;
+    &__no-plans {
+      text-align: center;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    &__line-item {
+	    display: flex;
+  		padding: 10px;
+      border-bottom: 1px solid rgba(#a7a7a7, 0.5);
+      font-size: 13px;
+      color: #545353;
+  		&__name {
+		    display: flex;
+  			flex: 1;
+  		}
+  		&__quantity {
+		    width: 100px;
+  		}
+    }
+	}
+
+  &__btn-wrapper {
+    margin-top: 20px;
+    text-align: center;
+    button {
+      height: 32px;
+      background: #58bf58;
+      color: white;
+      border-color: transparent;
+      border-radius: 3px;
+      padding: 3px 10px;
+      transition: background 0.5s;
+      cursor: pointer;
+      &:hover {
+        background: #65ab65;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.choose-product {
+	display: flex;
+	flex: 1;
+  &__product-list {
+  	display: flex;
+  	flex: 1;
+  	flex-direction: column;
+  	padding: 40px 20px;
+  }
+}

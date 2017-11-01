@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body, #app, .routes, .app-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.app-wrapper {
+	
+}

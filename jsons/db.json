@@ -1,0 +1,92 @@
+{
+	"customers": [
+		{
+			"name": "Unilever",
+			"id": "unilever"
+		},
+		{
+			"name": "Apple",
+			"id": "apple"
+		},
+		{
+			"name": "Nike",
+			"id": "nike"
+		},
+		{
+			"name": "Ford",
+			"id": "ford"
+		}
+	],
+	"plans": [
+		{
+			"id": "Classic",
+			"name": "Classic Ad",
+			"price": 26999,
+			"features": ["Basic"]
+		},
+		{
+			"id": "Standout",
+			"name": "Standout Ad",
+			"price": 32299,
+			"features": ["Basic", "Use Logo", "Longer Presentation text"]
+		},
+		{
+			"id": "Premium",
+			"name": "Premium Ad",
+			"price": 39499,
+			"features": ["Basic", "Use Logo", "Longer Presentation text", "Higher Visibility"]
+		}
+	],
+	"discounts": {
+		"unilever": [
+			{
+				"display": "Gets a “3 for 2” deal on Classic Ads",
+				"discountRate": 0.6666666666666666,
+				"minItems": 3,
+				"isClustered": true,
+				"planId": "Classic"
+			}
+		],
+		"apple": [
+			{
+				"display": "Gets a discount on Standout Ads where the price drops to $299.99 per ad",
+				"discountRate": 0.928790365026781,
+				"minItems": 1,
+				"isClustered": true,
+				"planId": "Standout"
+			}
+		],
+		"nike": [
+			{
+				"display": "Gets a discount on Premium Ads where 4 or more are purchased. The price drops to $379.99 per ad",
+				"discountRate": 0.9620243550469633,
+				"minItems": 4,
+				"isClustered": false,
+				"planId": "Premium"
+			}
+		],
+		"ford": [
+			{
+				"display": "Gets a “5 for 4” deal on Classic Ads",
+				"discountRate": 0.8,
+				"minItems": 5,
+				"isClustered": true,
+				"planId": "Classic"
+			},
+			{
+				"display": "Gets a discount on Standout Ads where the price drops to $309.99 per ad",
+				"discountRate": 0.9597510758847023,
+				"minItems": 1,
+				"isClustered": true,
+				"planId": "Standout"
+			},
+			{
+				"display": "Gets a discount on Premium Ads when 3 or more are purchased. The price drops to $389.99 per ad",
+				"discountRate": 0.9873414516823211,
+				"minItems": 3,
+				"isClustered": false,
+				"planId": "Premium"
+			}
+		]
+	}
+}
