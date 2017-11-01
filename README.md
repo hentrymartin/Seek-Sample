@@ -21,6 +21,18 @@ Now, you can access the resources in localhost:3004
 ### go to localhost:8080
 ```
 
+
+## FrontEnd Stack
+
+```
+	React V16.0.00
+	Redux
+	Router V4
+	Jest
+	Babel for transpiling
+	Webpack for bundling
+```
+
 ## Explanation for discount object
 
 Following is a sample discount object
